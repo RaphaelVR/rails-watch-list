@@ -2,8 +2,8 @@
 
 <%= render @list %>
 <% @list.reviews.each do |bookmark| %>
-  <p><%= bookmark.comment %> - <%= bookmark.movie_id %> - <%= bookmark.list_id %>
-  <%= link_to "delete list", list_path(list),
+  <p><%= bookmark.comment %> - <%= bookmark.movie_id %> - <%= bookmark.list_id %> </p>
+ <p> <%= link_to "delete list", list_path(list),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %></p>
 <% end %>
 
