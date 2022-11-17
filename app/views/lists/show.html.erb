@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @list %>
+<% @list.reviews.each do |bookmark| %>
+  <p><%= bookmark.comment %> - <%= bookmark.movie_id %> - <%= bookmark.list_id %>
+  <%= link_to "delete list", list_path(list),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %></p>
+<% end %>
+
+
+<div>
+  <%= link_to "Edit this list", edit_list_path(@list) %> |
+  <%= link_to "Back to lists", lists_path %>
+  <%= button_to "Destroy this list", @list, method: :delete %>
+</div>
