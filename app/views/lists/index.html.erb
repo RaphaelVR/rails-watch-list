@@ -1,13 +1,9 @@
-<%# <p style="color: green"><%= notice %></p> %>
+<%# <p style="color: green"><%= notice %></p>
+<h1>All lists</h1>
 
-<h1>Lists</h1>
-
-<p><%= @list.each do |l| %>
-<%= l.name %>
-<%= l.movie_id %>
-<%= l.bookmark %>
-
-</p>
+<div class='container'>
+<%= render 'list', list: @list %>
+</div>
 
 
 <%= link_to "New list", new_list_path %>

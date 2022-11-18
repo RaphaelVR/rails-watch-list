@@ -1,8 +1,7 @@
-<div id="Lists">
-  <%# <% @lists.each do |list| %>
-    <%# <%= render 'list', list: @list %> %>
-    <p>
-      <%# <%= link_to "Show this list", @list %> %>
-    </p>
-  <% end %> %>
+<div class="container">
+<% @lists.each do |l| %>
+ <%= link_to l.name, list_path(l), class: "btn btn-primary" %>
+<% end %>
+
+
 </div>
