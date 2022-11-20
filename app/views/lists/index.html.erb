@@ -1,9 +1,20 @@
 <%# <p style="color: green"><%= notice %></p>
-<h1>All lists</h1>
+<%# <h1>All lists</h1>
 
 <div class='container'>
 <%= render 'list', list: @list %>
 </div>
 
 
-<%= link_to "New list", new_list_path %>
+
+
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>All lists </h1>
+    
+    <%= render 'list', list: @list %>
+  </div>
+  <%= link_to "New list", new_list_path %>
+</div>

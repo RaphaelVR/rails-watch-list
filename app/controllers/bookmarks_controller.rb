@@ -1,4 +1,6 @@
 class BookmarksController < ApplicationController
+  before_action :set_bookmark, only: [:destroy]
+
   def index
     @bookmarks = Bookmark.all
   end
@@ -28,7 +30,7 @@ class BookmarksController < ApplicationController
 
   def destroy
     @bookmark.destroy
-    redirect_to bookmark_url, notice: 'Bookmark destroyed'
+    redirect_to list_path, notice: 'Bookmark destroyed', status: :see_other
   end
 
   private
